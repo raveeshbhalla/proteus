@@ -23,6 +23,17 @@ While it doesn't natively support setting a colorized version of a Drawable as a
 
     Bitmap bmp = Proteus.getColoredBitmap(Drawable src, int color);
 
+# How to use it
+Add the following lines to your build.gradle file
+
+    repositories {
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+    
+    dependencies {
+        compile 'in.raveesh:proteus:0.1.0-SNAPSHOT'
+    }
+
 # TODO
 - Add documentation
 - Clean up code
