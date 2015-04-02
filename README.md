@@ -26,4 +26,4 @@ While it doesn't natively support setting a colorized version of a Drawable as a
 # TODO
 - Add documentation
 - Clean up code
-- Add to Maven Central
+- ~~Add to Maven Central~~
