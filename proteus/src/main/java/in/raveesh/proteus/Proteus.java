@@ -18,24 +18,15 @@ import java.util.HashMap;
 public class Proteus {
 
     public static final String TAG = "Proteus";
-    private static HashMap<String, Integer> staticCache;
 
-    public static int getResourceId(Context context, String stringEquivalent){
-        Log.i(TAG, "Getting Resource ID for " + stringEquivalent);
-        if (staticCache == null){
-            staticCache = new HashMap<String, Integer>();
-        }
-        int cached = staticCache.get(stringEquivalent);
-        if (cached == 0){
-            int id = context.getResources().getIdentifier(stringEquivalent, null, null);
-            staticCache.put(stringEquivalent, id);
-            return id;
-        }
-        else{
-            return cached;
-        }
-    }
-
+    /**
+     * Credit for this Method goes to Roman Nurik, whose Gist this is where the code has been lifted from
+     * https://gist.github.com/romannurik/5779875
+     *
+     * @param src
+     * @param color
+     * @return
+     */
     public static Bitmap getColoredBitmap(Drawable src, int color) {
         boolean invert = false;
         int width = src.getIntrinsicWidth();
