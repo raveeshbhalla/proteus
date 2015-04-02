@@ -1,6 +1,5 @@
 package in.raveesh.proteus;
 
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -8,9 +7,6 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
-
-import java.util.HashMap;
 
 /**
  * Created by Raveesh on 02/04/15.
