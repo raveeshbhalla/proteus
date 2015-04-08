@@ -38,3 +38,5 @@ Add the following lines to your build.gradle file
 - Add documentation
 - Clean up code
 - ~~Add to Maven Central~~
+
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Proteus-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1709)
