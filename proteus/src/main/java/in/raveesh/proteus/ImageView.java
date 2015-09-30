@@ -2,6 +2,7 @@ package in.raveesh.proteus;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -11,8 +12,7 @@ import android.util.AttributeSet;
  * Created by Raveesh on 02/04/15.
  */
 public class ImageView extends android.widget.ImageView {
-    private int proteusColorResource;
-    private Drawable defaultDrawable;
+    private int proteusColorResource = 0;
 
     public ImageView(Context context) {
         super(context);
@@ -35,7 +35,6 @@ public class ImageView extends android.widget.ImageView {
 
     @Override
     public void setImageDrawable(Drawable drawable) {
-        defaultDrawable = drawable;
         if (proteusColorResource != 0) {
             BitmapDrawable d = new BitmapDrawable(getResources(), Proteus.getColoredBitmap(drawable, proteusColorResource));
             super.setImageDrawable(d);
@@ -44,14 +43,13 @@ public class ImageView extends android.widget.ImageView {
         }
     }
 
-    public void setPaint(int color) {
-        proteusColorResource = color;
-        if (getDrawable() != null) {
-            setImageDrawable(defaultDrawable);
-        }
-    }
-
-    public void setPaintResource(int resource) {
-        setPaint(getResources().getColor(resource));
+    /**
+     * Use this function to set an painted image using resource identifiers for drawable and paint
+     * @param drawable Resource id for image
+     * @param paintResource Resource id for paint
+     */
+    public void setPaintedDrawableFromResource(int drawable, int paintResource) {
+        proteusColorResource = getContext().getResources().getColor(paintResource);
+        setImageDrawable(getContext().getResources().getDrawable(drawable));
     }
 }

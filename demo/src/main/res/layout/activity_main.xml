@@ -16,14 +16,24 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_action_thumbs_up"
         app:paint="@android:color/black"/>
-
-    <in.raveesh.proteus.ImageButton
-        android:id="@+id/imageButton"
-        android:layout_below="@+id/imageView"
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_action_thumbs_up"
-        app:paint="@android:color/holo_blue_bright"/>
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        tools:text="Black"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/imageView"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:layout_alignBottom="@+id/imageView"/>
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Change Color"/>
 </RelativeLayout>
