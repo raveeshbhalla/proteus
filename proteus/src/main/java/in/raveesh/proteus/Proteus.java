@@ -24,7 +24,7 @@ public class Proteus {
      * @return
      */
     public static Bitmap getColoredBitmap(Drawable src, int color) {
-        boolean invert = false;
+        boolean invert = true; //Setting to true, which helps color all black drawables
         int width = src.getIntrinsicWidth();
         int height = src.getIntrinsicHeight();
         if (width <= 0 || height <= 0) {

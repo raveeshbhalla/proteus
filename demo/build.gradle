@@ -26,5 +26,5 @@ android {
 }
 
 dependencies {
-    compile 'in.raveesh:proteus:1.0.0'
+    compile project(":proteus")
 }

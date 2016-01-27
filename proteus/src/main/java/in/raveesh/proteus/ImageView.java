@@ -2,11 +2,9 @@ package in.raveesh.proteus;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-
 
 /**
  * Created by Raveesh on 02/04/15.
