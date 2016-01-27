@@ -1,6 +1,8 @@
 # Proteus
 A quick and simple way to paint your Drawables the color you want
 
+#### Important: v1.0.2 expects black drawables (instead of white from before). This was done to work better with the Vector Assets importing tool in Android Studio, which colors imported SVGs black by default.
+
 # How it works
 Proteus comes with a custom ImageView and an ImageButton. Simply use that in your XML files, and set the "app:paint" data as per your requirements. For example
 
@@ -24,20 +26,15 @@ While it doesn't natively support setting a colorized version of a Drawable as a
     Bitmap bmp = Proteus.getColoredBitmap(Drawable src, int color);
 
 # How to use it
-Add the following lines to your build.gradle file
+All my libraries will now be distributed via Jitpack. Add the following lines to your build.gradle file
 
     repositories {
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://jitpack.io" }
     }
     
     dependencies {
-        compile 'in.raveesh:proteus:0.1.0-SNAPSHOT'
+        compile 'com.github.raveeshbhalla:proteus:1.0.2'
     }
 
-# TODO
-- Add documentation
-- Clean up code
-- ~~Add to Maven Central~~
-- Add screenshots
-
+[![](https://jitpack.io/v/raveeshbhalla/proteus.svg)](https://jitpack.io/#raveeshbhalla/proteus)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Proteus-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1709)
