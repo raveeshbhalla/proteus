@@ -29,11 +29,13 @@
         android:textSize="16sp"
         android:layout_alignBottom="@+id/imageView"/>
 
-    <Button
+    <in.raveesh.proteus.Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_action_thumbs_up"
+        app:paint="@android:color/white"
         android:text="Change Color"/>
 </RelativeLayout>
